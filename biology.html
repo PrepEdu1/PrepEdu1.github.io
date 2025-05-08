@@ -1,51 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Biology - PrepEdu1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chemistry PDFs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f9ff;
-      text-align: center;
-      padding: 30px;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      padding: 40px 20px;
+      position: relative;
     }
+
     h1 {
-      color: #1a237e;
+      color: #2c3e50;
+      margin-bottom: 30px;
     }
-    .topic {
-      background-color: #ffffff;
-      padding: 15px;
-      margin: 10px auto;
-      border-radius: 8px;
-      width: 90%;
+
+    .pdf-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
       max-width: 600px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .back-button {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #1565c0;
+
+    .pdf-btn {
+      background: linear-gradient(to right, #000000, #434343);
       color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 6px;
+      transition: all 0.3s;
     }
-    .back-button:hover {
-      background-color: #0d47a1;
+
+    .pdf-btn:hover {
+      background: linear-gradient(to right, #222, #555);
+      transform: scale(1.02);
+    }
+
+    .back-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #3498db;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
-  <h1>Biology</h1>
-  <p>Welcome to the Biology page. Lessons, topics, and resources will appear here.</p>
 
-  <div class="topic">Topic 1: Atomic Structure (PDF Coming Soon)</div>
-  <div class="topic">Topic 2: Chemical Bonding (PDF Coming Soon)</div>
-  <div class="topic">Topic 3: Acids, Bases, and Salts (PDF Coming Soon)</div>
-  <div class="topic">Topic 4: Organic Chemistry (PDF Coming Soon)</div>
+  <h1>Chemistry PDF Lessons</h1>
 
-  <br>
-  <a class="back-button" href="index.html">Back to Home</a>
+  <div class="pdf-list">
+    <a class="pdf-btn" href="pdfs/chemistry_lesson1.pdf" target="_blank">1. Atomic Structure</a>
+    <a class="pdf-btn" href="pdfs/chemistry_lesson2.pdf" target="_blank">2. Chemical Reactions</a>
+    <a class="pdf-btn" href="pdfs/chemistry_lesson3.pdf" target="_blank">3. Organic Chemistry Basics</a>
+    <!-- Add more PDFs -->
+  </div>
+
+  <button class="back-btn" onclick="window.location.href='home.html'">Back to Subjects</button>
+
 </body>
 </html>
