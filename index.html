@@ -9,31 +9,32 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f5f5f5;
+      background-color: #f0f0f0;
       font-family: Arial, sans-serif;
     }
     .login-box {
-      background-color: white;
+      background: white;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px gray;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
     }
-    input[type="password"] {
-      width: 100%;
+    input {
       padding: 10px;
+      width: 100%;
       margin-top: 10px;
-      margin-bottom: 20px;
     }
     button {
-      width: 100%;
+      margin-top: 20px;
       padding: 10px;
-      background-color: #007bff;
+      width: 100%;
+      background: #007bff;
       color: white;
       border: none;
       cursor: pointer;
     }
     button:hover {
-      background-color: #0056b3;
+      background: #0056b3;
     }
   </style>
 </head>
@@ -47,11 +48,11 @@
 
   <script>
     function login() {
-      var password = document.getElementById("password").value;
+      const password = document.getElementById("password").value;
       if (password === "prep2025") {
         window.location.href = "home.html";
       } else {
-        alert("Incorrect password. Try again.");
+        alert("Incorrect password");
       }
     }
   </script>
