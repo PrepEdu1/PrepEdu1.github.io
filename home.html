@@ -4,77 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subjects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      text-align: center;
-      padding: 30px;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-top: 40px;
     }
 
     h1 {
-      color: #000000;
+      color: #222;
       margin-bottom: 30px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 20px;
-      max-width: 700px;
-      margin: 0 auto;
+      width: 90%;
+      max-width: 800px;
+      margin-bottom: 60px;
     }
 
-    .subject {
-      background-color: #000000;
+    .subject-btn {
+      background: linear-gradient(to right, #8e44ad, #3498db);
       color: white;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      text-align: center;
       text-decoration: none;
       font-size: 16px;
-      font-weight: bold;
-      transition: background 0.3s;
+      font-weight: 600;
+      transition: all 0.3s;
     }
 
-    .subject:hover {
-      background-color: #333333;
+    .subject-btn:hover {
+      background: linear-gradient(to right, #5b2c6f, #2e86de);
+      transform: scale(1.05);
     }
 
-    .logout {
-      margin-top: 40px;
-      background-color: #000000;
+    .logout-btn {
+      background-color: #2980b9;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
       border-radius: 8px;
       font-size: 16px;
+      font-weight: bold;
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .logout:hover {
-      background-color: #333333;
+    .logout-btn:hover {
+      background-color: #1f618d;
     }
   </style>
 </head>
 <body>
-  <h1>Choose a Subject</h1>
+
+  <h1>Select a Subject</h1>
 
   <div class="grid">
-    <a href="mathematics.html" class="subject">Mathematics</a>
-    <a href="chemistry.html" class="subject">Chemistry</a>
-    <a href="physics.html" class="subject">Physics</a>
-    <a href="biology.html" class="subject">Biology</a>
-    <a href="english.html" class="subject">English</a>
-    <a href="civics.html" class="subject">Civics</a>
-    <a href="ict.html" class="subject">ICT</a>
+    <a class="subject-btn" href="mathematics.html">Mathematics</a>
+    <a class="subject-btn" href="chemistry.html">Chemistry</a>
+    <a class="subject-btn" href="physics.html">Physics</a>
+    <a class="subject-btn" href="biology.html">Biology</a>
+    <a class="subject-btn" href="english.html">English</a>
+    <a class="subject-btn" href="civics.html">Civics</a>
+    <a class="subject-btn" href="ict.html">ICT</a>
   </div>
 
-  <button class="logout" onclick="logout()">Logout</button>
+  <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
 
-  <script>
-    function logout() {
-      localStorage.removeItem("loggedIn");
-      window.location.href = "index.html";
-    }
-  </script>
 </body>
 </html>
