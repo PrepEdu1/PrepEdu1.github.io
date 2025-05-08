@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Subjects</title>
+  <meta charset="UTF-8">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: #e6f0ff;
+      padding: 20px;
+      text-align: center;
     }
-    .login-box {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    h1 {
+      color: #003366;
     }
-    input {
-      padding: 10px;
+    .subject-list {
+      margin-top: 30px;
+    }
+    .subject-list a {
+      display: block;
       margin: 10px 0;
-      width: 100%;
+      font-size: 18px;
+      color: #007bff;
+      text-decoration: none;
     }
-    button {
-      padding: 10px;
-      width: 100%;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    .error {
-      color: red;
-      margin-top: 10px;
+    .subject-list a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>Enter Group Password</h2>
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="checkPassword()">Login</button>
-    <div class="error" id="error"></div>
+
+  <h1>Welcome to PrepEdu1</h1>
+  <p>Select a subject below:</p>
+
+  <div class="subject-list">
+    <a href="biology.html">Biology</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="civics.html">Civics</a>
+    <a href="english.html">English</a>
+    <a href="ict.html">ICT</a>
+    <a href="mathematics.html">Mathematics</a>
   </div>
 
-  <script>
-    const correctPassword = "group2025"; // <- your password here
-
-    function checkPassword() {
-      const input = document.getElementById("password").value;
-      if (input === correctPassword) {
-        window.location.href = "home.html"; // your subject homepage file
-      } else {
-        document.getElementById("error").innerText = "Incorrect password!";
-      }
-    }
-  </script>
 </body>
 </html>
