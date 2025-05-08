@@ -3,85 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mathematics PDFs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>Mathematics Topics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f9f9f9;
+      font-family: 'Italiana', serif;
+      background: #f5f7fa;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      padding: 40px 20px;
-      position: relative;
+      padding: 20px;
+      text-align: center;
     }
 
     h1 {
+      font-size: 2.5em;
       color: #2c3e50;
       margin-bottom: 30px;
     }
 
-    .pdf-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-    }
-
     .pdf-btn {
+      display: inline-block;
+      margin: 12px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #ffffff;
       background: linear-gradient(to right, #000000, #434343);
-      color: white;
-      padding: 14px;
       border: none;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
     }
 
     .pdf-btn:hover {
-      background: linear-gradient(to right, #222, #555);
-      transform: scale(1.02);
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .back-btn {
-      position: absolute;
-      bottom: 20px;
+      position: fixed;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #3498db;
+      background: linear-gradient(to right, #007bff, #0056b3);
       color: white;
       padding: 14px 28px;
+      font-size: 1.1em;
+      font-family: 'Italiana', serif;
       border: none;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 700;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     .back-btn:hover {
-      background-color: #2980b9;
+      background: linear-gradient(to right, #0056b3, #003f7f);
     }
   </style>
 </head>
 <body>
+  <h1>Mathematics Topics</h1>
 
-  <h1>Mathematics PDF Lessons</h1>
+  <button class="pdf-btn" onclick="window.open('pdfs/maths/algebra.pdf')">Algebra</button>
+  <button class="pdf-btn" onclick="window.open('pdfs/maths/geometry.pdf')">Geometry</button>
+  <button class="pdf-btn" onclick="window.open('pdfs/maths/calculus.pdf')">Calculus</button>
 
-  <div class="pdf-list">
-    <a class="pdf-btn" href="pdfs/math_lesson1.pdf" target="_blank">1. Algebra Basics</a>
-    <a class="pdf-btn" href="pdfs/math_lesson2.pdf" target="_blank">2. Geometry Introduction</a>
-    <a class="pdf-btn" href="pdfs/math_lesson3.pdf" target="_blank">3. Trigonometry Essentials</a>
-    <!-- Add more PDFs if needed -->
-  </div>
-
-  <button class="back-btn" onclick="window.location.href='home.html'">Back to Subjects</button>
-
+  <button class="back-btn" onclick="window.location.href='home.html'">Back to Home</button>
 </body>
 </html>
