@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mathematics - PrepEdu1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mathematics Topics</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f9ff;
+      background: #ffffff;
       text-align: center;
       padding: 30px;
     }
+
     h1 {
-      color: #1a237e;
+      color: #000000;
+      margin-bottom: 30px;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     .topic {
-      background-color: #ffffff;
-      padding: 15px;
-      margin: 10px auto;
-      border-radius: 8px;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .back-button {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #1565c0;
+      background-color: #000000;
       color: white;
+      padding: 15px;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
-    .back-button:hover {
-      background-color: #0d47a1;
+
+    .topic:hover {
+      background-color: #333333;
+    }
+
+    .back {
+      margin-top: 40px;
+      background-color: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .back:hover {
+      background-color: #333333;
     }
   </style>
 </head>
 <body>
-  <h1>Mathematics</h1>
-  <p>Welcome to the Mathematics page. Lessons, topics, and resources will appear here.</p>
+  <h1>Mathematics Topics</h1>
 
-  <div class="topic">Topic 1: Atomic Structure (PDF Coming Soon)</div>
-  <div class="topic">Topic 2: Chemical Bonding (PDF Coming Soon)</div>
-  <div class="topic">Topic 3: Acids, Bases, and Salts (PDF Coming Soon)</div>
-  <div class="topic">Topic 4: Organic Chemistry (PDF Coming Soon)</div>
+  <div class="grid">
+    <a href="pdfs/math/algebra.pdf" class="topic" target="_blank">Algebra</a>
+    <a href="pdfs/math/geometry.pdf" class="topic" target="_blank">Geometry</a>
+    <a href="pdfs/math/trigonometry.pdf" class="topic" target="_blank">Trigonometry</a>
+    <a href="pdfs/math/calculus.pdf" class="topic" target="_blank">Calculus</a>
+    <a href="pdfs/math/statistics.pdf" class="topic" target="_blank">Statistics</a>
+  </div>
 
-  <br>
-  <a class="back-button" href="index.html">Back to Home</a>
+  <button class="back" onclick="window.location.href='home.html'">Back to Subjects</button>
 </body>
 </html>
