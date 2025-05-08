@@ -14,21 +14,29 @@
 
     h1 {
       color: #c00000;
+      margin-bottom: 30px;
     }
 
-    .button {
-      display: block;
-      margin: 15px auto;
-      padding: 12px 25px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .subject {
       background-color: #c00000;
       color: white;
+      padding: 20px;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      width: 200px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .button:hover {
+    .subject:hover {
       background-color: #a00000;
     }
 
@@ -50,13 +58,15 @@
 <body>
   <h1>Choose a Subject</h1>
 
-  <a href="math.html" class="button">Mathematics</a>
-  <a href="chemistry.html" class="button">Chemistry</a>
-  <a href="physics.html" class="button">Physics</a>
-  <a href="biology.html" class="button">Biology</a>
-  <a href="english.html" class="button">English</a>
-  <a href="civics.html" class="button">Civics</a>
-  <a href="ict.html" class="button">ICT</a>
+  <div class="grid">
+    <a href="math.html" class="subject">Mathematics</a>
+    <a href="chemistry.html" class="subject">Chemistry</a>
+    <a href="physics.html" class="subject">Physics</a>
+    <a href="biology.html" class="subject">Biology</a>
+    <a href="english.html" class="subject">English</a>
+    <a href="civics.html" class="subject">Civics</a>
+    <a href="ict.html" class="subject">ICT</a>
+  </div>
 
   <button class="logout" onclick="logout()">Logout</button>
 
