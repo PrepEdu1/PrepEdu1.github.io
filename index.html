@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=auth.html" />
+    <title>PrepEdu Group Login</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>If you're not redirected, <a href="auth.html">click here</a>.</p>
+    <div class="login-box">
+      <h2>PrepEdu Group Login</h2>
+      <input type="password" id="passwordInput" placeholder="Enter password" />
+      <button onclick="checkPassword()">Login</button>
+    </div>
+
+    <script>
+      function checkPassword() {
+        const correctPassword = "prep2025"; // <<< your password here
+        const enteredPassword = document.getElementById("passwordInput").value;
+
+        if (enteredPassword === correctPassword) {
+          window.location.href = "home.html"; // <<< link to main page
+        } else {
+          alert("Incorrect password");
+        }
+      }
+    </script>
   </body>
 </html>
