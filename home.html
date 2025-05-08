@@ -1,38 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subjects</title>
-  <meta charset="UTF-8">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #eef4ff;
+      background: #fff8f8;
       text-align: center;
       padding: 30px;
     }
+
     h1 {
-      color: #003366;
+      color: #c00000;
     }
-    .subject-list a {
+
+    .button {
       display: block;
-      margin: 10px;
-      font-size: 20px;
-      color: #0066cc;
+      margin: 15px auto;
+      padding: 12px 25px;
+      background-color: #c00000;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      width: 200px;
     }
-    .subject-list a:hover {
-      text-decoration: underline;
+
+    .button:hover {
+      background-color: #a00000;
+    }
+
+    .logout {
+      margin-top: 40px;
+      background-color: #c00000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .logout:hover {
+      background-color: #a00000;
     }
   </style>
 </head>
 <body>
+  <h1>Choose a Subject</h1>
 
-  <h1>Subjects</h1>
-  <div class="subject-list">
-    <a href="math.html">Mathematics</a>
-    <a href="chemistry.html">Chemistry</a>
-    <!-- Add more links here -->
-  </div>
+  <a href="math.html" class="button">Mathematics</a>
+  <a href="chemistry.html" class="button">Chemistry</a>
+  <a href="physics.html" class="button">Physics</a>
+  <a href="biology.html" class="button">Biology</a>
+  <a href="english.html" class="button">English</a>
+  <a href="civics.html" class="button">Civics</a>
+  <a href="ict.html" class="button">ICT</a>
 
+  <button class="logout" onclick="logout()">Logout</button>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
