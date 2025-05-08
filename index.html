@@ -11,17 +11,17 @@
       <button onclick="checkPassword()">Login</button>
     </div>
 
-    <script>
-      function checkPassword() {
-        const correctPassword = "prep2025"; // <<< your password here
-        const enteredPassword = document.getElementById("passwordInput").value;
+     <script>
+  function checkPassword() {
+    var password = document.getElementById("password").value;
+    var correctPassword = "prep2025";
 
-        if (enteredPassword === correctPassword) {
-          window.location.href = "home.html"; // <<< link to main page
-        } else {
-          alert("Incorrect password");
-        }
-      }
-    </script>
-  </body>
+    if (password === correctPassword) {
+      window.location.href = "home.html"; // This must match your actual homepage file
+    } else {
+      alert("Incorrect password. Please try again.");
+    }
+  }
+</script>
+</body>
 </html>
